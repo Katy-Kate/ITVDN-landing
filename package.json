@@ -1,0 +1,32 @@
+{
+  "name": "itvdn-lending",
+  "version": "1.0.0",
+  "description": "*проверить, установлен ли node.js и npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Katy-Kate/ITVDN-landing.git"
+  },
+  "author": "Kate Turalnikova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Katy-Kate/ITVDN-landing/issues"
+  },
+  "homepage": "https://github.com/Katy-Kate/ITVDN-landing#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-myth": "^1.1.0",
+    "gulp-stylus": "^2.7.0",
+    "gulp.spritesmith": "^6.9.0",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "express": "git+https://github.com/visionmedia/express.git"
+  },
+  "optionalDependencies": {}
+}
