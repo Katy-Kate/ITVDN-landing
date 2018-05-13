@@ -5,6 +5,8 @@ const stylus = require('gulp-stylus');
 const spritesmith = require('gulp.spritesmith');
 const rimraf = require('rimraf');
 const myth = require('gulp-myth');
+const sourcemaps = require('gulp-sourcemaps');
+
 
 
 //  server
@@ -30,22 +32,13 @@ gulp.task('templates:compile', function() {
 /* ------------ Styles compile ------------- */
 
 gulp.task('styles:compile', function() {
-    return gulp.src('source/styles/main.styl')
+    return gulp.src('source/css/main.styl')
         .pipe(stylus())
         .on('error', console.log)
+        .pipe(myth())
         .pipe(gulp.dest('build/css'));
 });
 
-// gulp.task('styles:compile', function() {
-//     return gulp.src('source/styles/main.styl')
-//         .pipe(stylus({
-//             use: ['nib']
-//         })) // собираем stylus
-//         .on('error', console.log) // Если есть ошибки, выводим и продолжаем
-//         .pipe(myth()) // добавляем префиксы - http://www.myth.io/
-//         .pipe(gulp.dest('build/css')); // записываем css
-//         //.pipe(livereload(server)); // даем команду на перезагрузку css
-// });
 
 /* ------------ Sprite ------------- */
 gulp.task('sprite', function (cb) {
@@ -83,14 +76,24 @@ gulp.task('copy', gulp.parallel('copy:img','copy:fonts'));
 
 /* ------------ Watchers ------------- */
 gulp.task('watch',function(){
-    gulp.watch('source/styles/**/*.styl',gulp.series('styles:compile'));
+    gulp.watch('source/css/**/*.styl',gulp.series('styles:compile'));
     gulp.watch('source/template/**/*.jade',gulp.series('templates:compile'));
+    gulp.watch('source/js/**/*.js',gulp.series('compress'));
+
+});
+
+/* ------------- Compress JS ---------*/
+gulp.task('compress', function() {
+    return gulp.src('source/js/*.js')
+        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('build/js'));
 });
 
 
 gulp.task('default', gulp.series(
     'clean',
-    gulp.parallel('templates:compile', 'styles:compile', 'sprite', 'copy'),
+    gulp.parallel('templates:compile', 'styles:compile', 'compress', 'sprite', 'copy'),
     gulp.parallel('watch', 'server')
     )
 );

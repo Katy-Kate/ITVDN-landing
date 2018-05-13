@@ -1,0 +1,222 @@
+//------------------colors-------------//
+
+c_main = #eff3f6
+c_title = #627080
+c_content = #000
+
+c_orange = #ff6600
+c_green = #33cc00
+c_red = #cc0000
+c_blue = #0f72bd
+c_shadow = rgba(103, 162, 206, 0.13)
+
+
+//---------------------responsive------------//
+w_lg = 1000px
+w_md = 920px
+w_sm = 790px
+w_xl = 599px
+w_xs = 465px
+
+//----------------common styles----------//
+.clearfix:before,
+.clearfix:after
+  content ' '
+  display table
+
+.clearfix:after
+  clear both
+
+
+body
+  overflow-x auto
+  font-family 'Roboto', sans-serif
+  font-size 16px
+  scroll-behavior smooth
+  min-width 320px
+
+h2,.h2
+  font-size 1.5rem
+  padding .6em 0
+
+table
+  width: 100%
+//----------------------------left-column------------//
+#table1
+  tr
+    height 92px
+    td
+      background-color transparent!important
+.panel
+  display grid
+  grid-template-columns 1fr 1fr
+  width 100%
+  height 100vh
+  background c_main
+  &_task
+    padding 15px
+    height 100vh
+    overflow-y scroll
+.icon
+  display inline-block
+  width auto
+  margin-right 10px
+  color  lighten(c_content,55%)
+
+.box-wrapper
+  position relative
+  display grid
+  grid-template-columns auto 30px  1fr
+  margin 10px 0
+  padding 3px
+  max-width 915px
+  background white
+  box-shadow 3px0px 7px c_shadow
+  border-radius 3px
+  border-style none!important
+.box-line
+  width 3px
+  height 100%
+  &--orange
+    background c_orange
+  &--green
+    background c_green
+  &--blue
+    background c_blue
+  &--red
+    background c_red
+
+.box-btn
+  width 30px
+  margin-left 6px
+.box
+  display grid
+  grid-template-columns repeat(5,auto)
+  margin 20px 0
+  &-btn_btn
+    border-style none!important
+    width 20px
+    height 20px
+    line-height .5
+    color c_title
+  > div
+    padding 0 20px
+  &_title
+    min-width 200px
+    border-right 1px solid c_main
+    &__name
+      font-size 1.13rem
+      margin-bottom .56em
+      color c_content
+    &__company
+      font-size 1rem
+      color  lighten(c_content,55%)
+  &_time
+    display flex
+    justify-content center
+    align-items center
+    &__date
+      display inline-block
+      width auto
+      margin-right 3px
+      color c_content
+    &__hour
+      display inline-block
+      width auto
+      color  lighten(c_content,55%)
+      &--end
+        display none
+  &_duration
+    display flex
+    justify-content center
+    align-items center
+    &__hour
+      display inline-block
+      width auto
+      color  lighten(c_content,55%)
+  &_crane
+    border-right 1px solid c_main
+    display flex
+    justify-content center
+    align-items center
+    text-align center
+    &__number
+      display inline-block
+      width auto
+      color  lighten(c_content,55%)
+  &_editing
+    display flex
+    justify-content center
+    align-items center
+    &__icon
+      margin-right 0
+
+
+
+//----------------------------right-column------------//
+
+.calendar
+  display grid
+  grid-template-columns auto 1fr
+  height 100vh
+  overflow-y auto
+  &_time
+    padding 0 10px
+    background darken(c_main,5%)
+    div
+      height 55px
+      margin-top -3px
+      text-align center
+      color  lighten(c_content,55%)
+  &_table
+    background white
+    &__row
+      height 55px
+      &:nth-child(2n)
+        background lighten(c_main,50%)
+        border-top 1px solid darken(c_main,5%)
+        border-bottom 1px solid darken(c_main,5%)
+    &__col
+      border-right 1px solid darken(c_main,5%)
+      width 50%
+
+
+
+#table2
+  min-width 500px
+  tr
+    height 50px
+  .box
+    display block
+    text-align right
+    margin 0
+    padding-right 5px
+    &_title__name
+      font-size 1rem
+    &_time
+      display inline-block
+      margin-right 5px
+      padding-right 5px
+      border-right 1px solid lighten(c_content,55%)
+      font-size .8rem
+      &__hour
+        float left
+        padding-right 5px
+    &_duration
+      display inline-block
+      font-size .8rem
+      padding-left 0
+      &__hour
+        float left
+  .box_title__company,
+  .icon,
+  .box_time__date,
+  .box_editing,
+  .box_crane
+    display  none
+  .box_time__hour
+    &--end
+      display block
+  .box-wrapper
+    grid-template-columns 3px  30px 1fr
+    margin 0
