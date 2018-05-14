@@ -23,9 +23,9 @@ html
                             td
                                 .redips-drag.box-wrapper
                                    .box-line.box-line--orange
-                                   .box-btn
+                                   .box-btn(onmouseover="enableDrop(this)")
                                        .box-btn_btn . . .
-                                   .box.auslek
+                                   .box(onmouseover="disableDrop(this)")
                                        .box_title
                                            .box_title__name Basement - Electrics
                                            .box_title__company AusLek
@@ -46,9 +46,9 @@ html
                             td
                                 .redips-drag.box-wrapper
                                    .box-line.box-line--orange
-                                   .box-btn
+                                   .box-btn(onmouseover="enableDrop(this)")
                                        .box-btn_btn . . .
-                                   .box.auslek
+                                   .box(onmouseover="disableDrop(this)")
                                        .box_title
                                           .box_title__name Level 2 - Concreting
                                           .box_title__company JB Enterprises
@@ -69,9 +69,154 @@ html
                             td
                                 .redips-drag.box-wrapper
                                     .box-line.box-line--orange
-                                    .box-btn
+                                    .box-btn(onmouseover="enableDrop(this)")
                                         .box-btn_btn . . .
-                                    .box.auslek
+                                    .box(onmouseover="disableDrop(this)")
+                                        .box_title
+                                            .box_title__name Level 13 - Formwork
+                                            .box_title__company NSW Wood PLC
+                                        .box_time
+                                            i.far.fa-calendar-alt.box_time__icon.icon
+                                            .box_time__date 14/1/18 -
+                                            .box_time__hour.box_time__hour--sart  14:30
+                                            .box_time__hour.box_time__hour--end  - 15:40
+                                        .box_duration
+                                            i.far.fa-clock.box_duration__icon.icon
+                                            .box_duration__hour 1hour 10min
+                                        .box_crane
+                                            .box_crane__icon.fa-seedling.fas.icon
+                                            .box_crane__number 2
+                                        .box_editing
+                                            .box_editing__icon.fas.fa-pencil-alt.icon
+
+                h2.h2 Recently Updated
+                //table#table3.unscheduled
+                //    tbody
+                //        tr
+                //            td
+                //                .redips-drag.box-wrapper
+                //                    .box-line.box-line--orange
+                //                    .box-btn(onmouseover="enableDrop(this)")
+                //                        .box-btn_btn . . .
+                //                    .box(onmouseover="disableDrop(this)")
+                //                        .box_title
+                //                            .box_title__name Basement - Electrics
+                //                            .box_title__company AusLek
+                //                        .box_time
+                //                            i.far.fa-calendar-alt.box_time__icon.icon
+                //                            .box_time__date Today -
+                //                            .box_time__hour.box_time__hour--start  8:30
+                //                            .box_time__hour.box_time__hour--end - 10:50
+                //                        .box_duration
+                //                            i.far.fa-clock.box_duration__icon.icon
+                //                            .box_duration__hour 2hr 20min
+                //                        .box_crane
+                //                            .box_crane__icon.fa-seedling.fas.icon
+                //                            .box_crane__number 2
+                //                        .box_editing
+                //                            .box_editing__icon.fas.fa-pencil-alt.icon
+                //        tr
+                //            td
+                //                .redips-drag.box-wrapper
+                //                    .box-line.box-line--orange
+                //                    .box-btn(onmouseover="enableDrop(this)")
+                //                        .box-btn_btn . . .
+                //                    .box(onmouseover="disableDrop(this)")
+                //                        .box_title
+                //                            .box_title__name Level 2 - Concreting
+                //                            .box_title__company JB Enterprises
+                //                        .box_time
+                //                            i.far.fa-calendar-alt.box_time__icon.icon
+                //                            .box_time__date 12/12/17 -
+                //                            .box_time__hour.box_time__hour--start 11:45
+                //                            .box_time__hour.box_time__hour--end - 12:25
+                //                        .box_duration
+                //                            i.far.fa-clock.box_duration__icon.icon
+                //                            .box_duration__hour 45min
+                //                        .box_crane
+                //                            .box_crane__icon.fa-seedling.fas.icon
+                //                            .box_crane__number 2
+                //                        .box_editing
+                //                            .box_editing__icon.fas.fa-pencil-alt.icon
+                //        tr
+                //            td
+                //                .redips-drag.box-wrapper
+                //                    .box-line.box-line--orange
+                //                    .box-btn(onmouseover="enableDrop(this)")
+                //                        .box-btn_btn . . .
+                //                    .box(onmouseover="disableDrop(this)")
+                //                        .box_title
+                //                            .box_title__name Level 13 - Formwork
+                //                            .box_title__company NSW Wood PLC
+                //                        .box_time
+                //                            i.far.fa-calendar-alt.box_time__icon.icon
+                //                            .box_time__date 14/1/18
+                //                            .box_time__hour.box_time__hour--sart - 14:30
+                //                            .box_time__hour.box_time__hour--end 15:40
+                //                        .box_duration
+                //                            i.far.fa-clock.box_duration__icon.icon
+                //                            .box_duration__hour 1hour 10min
+                //                        .box_crane
+                //                            .box_crane__icon.fa-seedling.fas.icon
+                //                            .box_crane__number 2
+                //                        .box_editing
+                //                            .box_editing__icon.fas.fa-pencil-alt.icon
+
+                table#table3.updated
+                    tbody
+                        tr
+                            td
+                                .redips-drag.box-wrapper
+                                    .box-line.box-line--green
+                                    .box-btn(onmouseover="enableDrop(this)")
+                                        .box-btn_btn . . .
+                                    .box(onmouseover="disableDrop(this)")
+                                        .box_title
+                                            .box_title__name Basement - Electrics
+                                            .box_title__company AusLek
+                                        .box_time
+                                            i.far.fa-calendar-alt.box_time__icon.icon
+                                            .box_time__date Today -
+                                            .box_time__hour.box_time__hour--start  8:30
+                                            .box_time__hour.box_time__hour--end - 10:50
+                                        .box_duration
+                                            i.far.fa-clock.box_duration__icon.icon
+                                            .box_duration__hour 2hr 20min
+                                        .box_crane
+                                            .box_crane__icon.fa-seedling.fas.icon
+                                            .box_crane__number 2
+                                        .box_editing
+                                            .box_editing__icon.fas.fa-pencil-alt.icon
+                        tr
+                            td
+                                .redips-drag.box-wrapper
+                                    .box-line.box-line--red
+                                    .box-btn(onmouseover="enableDrop(this)")
+                                        .box-btn_btn . . .
+                                    .box(onmouseover="disableDrop(this)")
+                                        .box_title
+                                            .box_title__name Level 2 - Concreting
+                                            .box_title__company JB Enterprises
+                                        .box_time
+                                            i.far.fa-calendar-alt.box_time__icon.icon
+                                            .box_time__date 12/12/17 -
+                                            .box_time__hour.box_time__hour--start 11:45
+                                            .box_time__hour.box_time__hour--end - 12:25
+                                        .box_duration
+                                            i.far.fa-clock.box_duration__icon.icon
+                                            .box_duration__hour 45min
+                                        .box_crane
+                                            .box_crane__icon.fa-seedling.fas.icon
+                                            .box_crane__number 2
+                                        .box_editing
+                                            .box_editing__icon.fas.fa-pencil-alt.icon
+                        tr
+                            td
+                                .redips-drag.box-wrapper
+                                    .box-line.box-line--blue
+                                    .box-btn(onmouseover="enableDrop(this)")
+                                        .box-btn_btn . . .
+                                    .box(onmouseover="disableDrop(this)")
                                         .box_title
                                             .box_title__name Level 13 - Formwork
                                             .box_title__company NSW Wood PLC
@@ -88,213 +233,99 @@ html
                                             .box_crane__number 2
                                         .box_editing
                                             .box_editing__icon.fas.fa-pencil-alt.icon
+                        tr
+                            td
+                                .redips-drag.box-wrapper
+                                    .box-line.box-line--green
+                                    .box-btn(onmouseover="enableDrop(this)")
+                                        .box-btn_btn . . .
+                                    .box(onmouseover="disableDrop(this)")
+                                        .box_title
+                                            .box_title__name Basement - Electrics
+                                            .box_title__company AusLek
+                                        .box_time
+                                            i.far.fa-calendar-alt.box_time__icon.icon
+                                            .box_time__date Today -
+                                            .box_time__hour.box_time__hour--start  8:30
+                                            .box_time__hour.box_time__hour--end - 10:50
+                                        .box_duration
+                                            i.far.fa-clock.box_duration__icon.icon
+                                            .box_duration__hour 2hr 20min
+                                        .box_crane
+                                            .box_crane__icon.fa-seedling.fas.icon
+                                            .box_crane__number 2
+                                        .box_editing
+                                            .box_editing__icon.fas.fa-pencil-alt.icon
+                        tr
+                            td
+                                .redips-drag.box-wrapper
+                                    .box-line.box-line--red
+                                    .box-btn(onmouseover="enableDrop(this)")
+                                        .box-btn_btn . . .
+                                    .box(onmouseover="disableDrop(this)")
+                                        .box_title
+                                            .box_title__name Level 2 - Concreting
+                                            .box_title__company JB Enterprises
+                                        .box_time
+                                            i.far.fa-calendar-alt.box_time__icon.icon
+                                            .box_time__date 12/12/17 -
+                                            .box_time__hour.box_time__hour--start 11:45
+                                            .box_time__hour.box_time__hour--end - 12:25
+                                        .box_duration
+                                            i.far.fa-clock.box_duration__icon.icon
+                                            .box_duration__hour 45min
+                                        .box_crane
+                                            .box_crane__icon.fa-seedling.fas.icon
+                                            .box_crane__number 2
+                                        .box_editing
+                                            .box_editing__icon.fas.fa-pencil-alt.icon
 
-                h2.h2 Recently Updated
-                .updated
-                    table.unscheduled
-                        tbody
-                            tr
-                                td
-                                    .redips-drag.box-wrapper
-                                        .box-line.box-line--green
-                                        .box-btn
-                                        .box.auslek
-                                            .box_title
-                                                .box_title__name Basement - Electrics
-                                                .box_title__company AusLek
-                                            .box_time
-                                                i.far.fa-calendar-alt.box_time__icon.icon
-                                                .box_time__date Today -
-                                                .box_time__hour.box_time__hour--start  8:30
-                                                .box_time__hour.box_time__hour--end - 10:50
-                                            .box_duration
-                                                i.far.fa-clock.box_duration__icon.icon
-                                                .box_duration__hour 2hr 20min
-                                            .box_crane
-                                                .box_crane__icon.fa-seedling.fas.icon
-                                                .box_crane__number 2
-                                            .box_editing
-                                                .box_editing__icon.fas.fa-pencil-alt.icon
-                            tr
-                                td
-                                    .redips-drag.box-wrapper
-                                        .box-line.box-line--red
-                                        .box-btn
-                                        .box.auslek
-                                            .box_title
-                                                .box_title__name Level 2 - Concreting
-                                                .box_title__company JB Enterprises
-                                            .box_time
-                                                i.far.fa-calendar-alt.box_time__icon.icon
-                                                .box_time__date 12/12/17 -
-                                                .box_time__hour.box_time__hour--start 11:45
-                                                .box_time__hour.box_time__hour--end - 12:25
-                                            .box_duration
-                                                i.far.fa-clock.box_duration__icon.icon
-                                                .box_duration__hour 45min
-                                            .box_crane
-                                                .box_crane__icon.fa-seedling.fas.icon
-                                                .box_crane__number 2
-                                            .box_editing
-                                                .box_editing__icon.fas.fa-pencil-alt.icon
-
-
-
-
-                            tr
-                                td
-                                    .redips-drag.box-wrapper
-                                        .box-line.box-line--blue
-                                        .box-btn
-                                        .box.auslek
-                                            .box_title
-                                                .box_title__name Level 13 - Formwork
-                                                .box_title__company NSW Wood PLC
-                                            .box_time
-                                                i.far.fa-calendar-alt.box_time__icon.icon
-                                                .box_time__date 14/1/18
-                                                .box_time__hour.box_time__hour--sart - 14:30
-                                                .box_time__hour.box_time__hour--end 15:40
-                                            .box_duration
-                                                i.far.fa-clock.box_duration__icon.icon
-                                                .box_duration__hour 1hour 10min
-                                            .box_crane
-                                                .box_crane__icon.fa-seedling.fas.icon
-                                                .box_crane__number 2
-                                            .box_editing
-                                                .box_editing__icon.fas.fa-pencil-alt.icon
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            tr
-                                td
-                                    .redips-drag.box-wrapper
-                                        .box-line.box-line--green
-                                        .box-btn
-                                        .box.auslek
-                                            .box_title
-                                                .box_title__name Basement - Electrics
-                                                .box_title__company AusLek
-                                            .box_time
-                                                i.far.fa-calendar-alt.box_time__icon.icon
-                                                .box_time__date Today -
-                                                .box_time__hour.box_time__hour--start  8:30
-                                                .box_time__hour.box_time__hour--end - 10:50
-                                            .box_duration
-                                                i.far.fa-clock.box_duration__icon.icon
-                                                .box_duration__hour 2hr 20min
-                                            .box_crane
-                                                .box_crane__icon.fa-seedling.fas.icon
-                                                .box_crane__number 2
-                                            .box_editing
-                                                .box_editing__icon.fas.fa-pencil-alt.icon
-                            tr
-                                td
-                                    .redips-drag.box-wrapper
-                                        .box-line.box-line--red
-                                        .box-btn
-                                        .box.auslek
-                                            .box_title
-                                                .box_title__name Level 2 - Concreting
-                                                .box_title__company JB Enterprises
-                                            .box_time
-                                                i.far.fa-calendar-alt.box_time__icon.icon
-                                                .box_time__date 12/12/17 -
-                                                .box_time__hour.box_time__hour--start 11:45
-                                                .box_time__hour.box_time__hour--end - 12:25
-                                            .box_duration
-                                                i.far.fa-clock.box_duration__icon.icon
-                                                .box_duration__hour 45min
-                                            .box_crane
-                                                .box_crane__icon.fa-seedling.fas.icon
-                                                .box_crane__number 2
-                                            .box_editing
-                                                .box_editing__icon.fas.fa-pencil-alt.icon
-
-                            tr
-                                td
-                                    .redips-drag.box-wrapper
-                                        .box-line.box-line--blue
-                                        .box-btn
-                                        .box.auslek
-                                            .box_title
-                                                .box_title__name Level 13 - Formwork
-                                                .box_title__company NSW Wood PLC
-                                            .box_time
-                                                i.far.fa-calendar-alt.box_time__icon.icon
-                                                .box_time__date 14/1/18
-                                                .box_time__hour.box_time__hour--sart - 14:30
-                                                .box_time__hour.box_time__hour--end 15:40
-                                            .box_duration
-                                                i.far.fa-clock.box_duration__icon.icon
-                                                .box_duration__hour 1hour 10min
-                                            .box_crane
-                                                .box_crane__icon.fa-seedling.fas.icon
-                                                .box_crane__number 2
-                                            .box_editing
-                                                .box_editing__icon.fas.fa-pencil-alt.icon
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            tr
-                                td
-                                    .redips-drag.box-wrapper
-                                        .box-line.box-line--green
-                                        .box-btn
-                                        .box.auslek
-                                            .box_title
-                                                .box_title__name Basement - Electrics
-                                                .box_title__company AusLek
-                                            .box_time
-                                                i.far.fa-calendar-alt.box_time__icon.icon
-                                                .box_time__date Today -
-                                                .box_time__hour.box_time__hour--start  8:30
-                                                .box_time__hour.box_time__hour--end - 10:50
-                                            .box_duration
-                                                i.far.fa-clock.box_duration__icon.icon
-                                                .box_duration__hour 2hr 20min
-                                            .box_crane
-                                                .box_crane__icon.fa-seedling.fas.icon
-                                                .box_crane__number 2
-                                            .box_editing
-                                                .box_editing__icon.fas.fa-pencil-alt.icon
+                        tr
+                            td
+                                .redips-drag.box-wrapper
+                                    .box-line.box-line--blue
+                                    .box-btn(onmouseover="enableDrop(this)")
+                                        .box-btn_btn . . .
+                                    .box(onmouseover="disableDrop(this)")
+                                        .box_title
+                                            .box_title__name Level 13 - Formwork
+                                            .box_title__company NSW Wood PLC
+                                        .box_time
+                                            i.far.fa-calendar-alt.box_time__icon.icon
+                                            .box_time__date 14/1/18
+                                            .box_time__hour.box_time__hour--sart - 14:30
+                                            .box_time__hour.box_time__hour--end 15:40
+                                        .box_duration
+                                            i.far.fa-clock.box_duration__icon.icon
+                                            .box_duration__hour 1hour 10min
+                                        .box_crane
+                                            .box_crane__icon.fa-seedling.fas.icon
+                                            .box_crane__number 2
+                                        .box_editing
+                                            .box_editing__icon.fas.fa-pencil-alt.icon
+                        tr
+                            td
+                                .redips-drag.box-wrapper
+                                    .box-line.box-line--green
+                                    .box-btn(onmouseover="enableDrop(this)")
+                                        .box-btn_btn . . .
+                                    .box(onmouseover="disableDrop(this)")
+                                        .box_title
+                                            .box_title__name Basement - Electrics
+                                            .box_title__company AusLek
+                                        .box_time
+                                            i.far.fa-calendar-alt.box_time__icon.icon
+                                            .box_time__date Today -
+                                            .box_time__hour.box_time__hour--start  8:30
+                                            .box_time__hour.box_time__hour--end - 10:50
+                                        .box_duration
+                                            i.far.fa-clock.box_duration__icon.icon
+                                            .box_duration__hour 2hr 20min
+                                        .box_crane
+                                            .box_crane__icon.fa-seedling.fas.icon
+                                            .box_crane__number 2
+                                        .box_editing
+                                            .box_editing__icon.fas.fa-pencil-alt.icon
 
             .calendar
                 .calendar_time
@@ -321,11 +352,63 @@ html
                     div 14.30
                     div 15.00
                     div 15.30
-                    div 16.00
-                    div 16.30
                 #right.calendar_table
                     table#table2
                         tbody
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
+                            tr.calendar_table__row
+                                td.calendar_table__col
+                                td.calendar_table__col
                             tr.calendar_table__row
                                 td.calendar_table__col
                                 td.calendar_table__col

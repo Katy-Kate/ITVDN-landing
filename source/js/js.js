@@ -8,20 +8,35 @@
 
 // define redips_init and random color generator
 var redipsInit,
+    rd,
     rndColor;
 
 // redips initialization
 redipsInit = function () {
     // reference to the REDIPS.drag lib
-    var rd = REDIPS.drag;
+     rd = REDIPS.drag;
     // initialization
     rd.init();
     // dragged elements can be placed to the empty cells only
-    rd.dropMode = 'overwrite';
+    rd.dropMode = 'single';
     // every change of current TD will have different background color
     rd.event.changed = function () {
         rd.hover.colorTd = rndColor();
     };
+    rd.event.dropped = function () {
+         //debugger;
+        // var ddfd =  $( "#table2 .box-wrapper" );
+        $( "#table2 .box-wrapper" ).resizable({
+            //containment: "#table2"
+        });
+        $( "#table1 .ui-resizable" ).removeAttr("style");
+        $( "#table1 .ui-resizable" ).resizable( "destroy" );
+        $( "#table3 .ui-resizable" ).removeAttr("style");
+        $( "#table3 .ui-resizable" ).resizable( "destroy" );
+
+
+    };
+    rd.enableDrag(false, '.redips-drag');
 };
 
 // random color generator - http://www.redips.net/javascript/random-color-generator/
@@ -42,10 +57,32 @@ else if (window.attachEvent) {
     window.attachEvent('onload', redipsInit);
 };
 
+function enableDrop(e){
 
+    var parent = e.parentNode;
+    rd.enableDrag(true, parent);
+};
+function disableDrop(e){
 
-///--------------------------------------------Resizable-------------------------------////
-
-$( function() {
+    var parent = e.parentNode;
+    rd.enableDrag(false, parent);
+};
+$(document).ready(function(){
     $( "#table2 .box-wrapper" ).resizable();
+    $( "#table3 .box-wrapper" ).resizable();
+    //$( ".box-wrapper" ).on( "resizestart", function( event, ui ) {
+        //debugger;
+        // var ddf= this;
+        // var widget = $( "#table2 .box-wrapper" ).resizable( "widget" );
+        //
+        // ddf.style.position = "absolute";
+        //
+        // var parent =  ddf.parentNode;
+        // parent.style.position = "relative";
+
+
+    //} );
+
 });
+
+
