@@ -69,7 +69,7 @@ function disableDrop(e){
 };
 $(document).ready(function(){
     $( "#table2 .box-wrapper" ).resizable();
-    $( "#table3 .box-wrapper" ).resizable();
+
     //$( ".box-wrapper" ).on( "resizestart", function( event, ui ) {
         //debugger;
         // var ddf= this;
